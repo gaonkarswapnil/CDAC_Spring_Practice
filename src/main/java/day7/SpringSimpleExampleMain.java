@@ -1,14 +1,14 @@
 package day7;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringSimpleExampleMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String configPath = "spring-config.xml";
-		ApplicationContext ac= new FileSystemXmlApplicationContext(configPath);
+		ApplicationContext ac= new ClassPathXmlApplicationContext(configPath);
 		
 		Object obj = ac.getBean("myBean1");
 		GreetingService gs = (GreetingService) obj;
